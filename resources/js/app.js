@@ -13,5 +13,15 @@ require('./bootstrap');
  */
 
 require('./components/Example');
-require('./components/Carousel');
-require('./components/Footer');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Carousel from './components/Carousel';  // Assuming your Carousel component is in resources/js/components/Carousel.js
+
+// Import slick carousel CSS
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+// Render the Carousel component
+if (document.getElementById('carousel')) {
+    ReactDOM.render(<Carousel />, document.getElementById('carousel'));
+}
